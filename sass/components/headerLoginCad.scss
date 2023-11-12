@@ -22,6 +22,7 @@ $corBranco: #fff;
 
             a{
                 position: relative;
+                color: $corPrincipal;
 
                 &:visited{
                     color: $corPrincipal;
@@ -59,6 +60,7 @@ $corBranco: #fff;
                 color: $corBranco; 
                 a{
                     position: relative;
+                    color: $corBranco;
     
                     &:visited{
                         color: $corBranco;
