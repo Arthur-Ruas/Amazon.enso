@@ -1,0 +1,198 @@
+$corPrincipal: #00686b;
+$corEscura: #093f49;
+$corBranco: #fff;
+
+*::after{
+    font-weight: bold;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+
+    .headerTop{
+        background-color: $corBranco;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 6rem;  
+        z-index: 9999;
+
+        .logo{
+            color: $corEscura;
+            font-size: 2rem;
+            font-weight: 600;
+            font-family: 'Courgette', cursive;
+        }
+
+        .headerIcons{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            .icons{
+                text-align: center;
+                cursor: pointer;
+
+                img{
+                    height: 25px;
+                }
+
+                h6{
+                    line-height: 10px;
+                }
+            }
+
+            .carrinho{
+                position: relative;
+
+                &::after{
+                    content: "Carrinho";
+                    position: absolute;
+                    right: 50%;
+                    bottom: -15px;
+                    opacity: 0;
+                    transform: translateX(50%);
+                    font-size: .8rem;
+                }
+
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                    }
+
+                }
+            }
+
+            .favoritos{
+                position: relative;
+
+                &::after{
+                    content: "Favoritos";
+                    position: absolute;
+                    right: 50%;
+                    bottom: -15px;
+                    opacity: 0;
+                    transform: translateX(50%);
+                    font-size: .8rem;
+                }
+
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                    }
+
+                }
+            }
+
+            .perfil{
+                position: relative;
+                cursor: pointer;
+
+                img{
+                    height: 25px;
+                }
+
+                &::after{
+                    content: "Conta";
+                    position: absolute;
+                    right: 50%;
+                    bottom: -15px;
+                    opacity: 0;
+                    transform: translateX(50%);
+                    font-size: .8rem;
+                }
+
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                    }
+
+                }
+            }
+        }
+
+        .searchBar{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: .5rem 1rem;
+            border-radius: 5px;
+
+            input{
+                background-color: transparent;
+                width: 450px;
+                border: none;
+                font-size: 1rem;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            img{
+                height: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .headerBottom{
+        background-color: $corBranco;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+        z-index: 9998;
+
+        .navBar{
+            display: flex;
+            gap: 40px;
+
+            .navItems{
+                position: relative;
+                color: $corEscura;
+                font-size: .9rem;
+                font-weight: bold;
+                cursor: pointer;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: $corEscura;
+                    height: 2px;
+                    width: 0;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.row{
+    .headerTop{
+        padding: .7rem 5rem;  
+        transition: .1s;
+    }
+}
+
+.btnRow{
+    .navItems{
+        display: none;
+    }
+}

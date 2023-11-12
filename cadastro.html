@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.enso</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <script defer src="./js/senha.js"></script>
+
+  <header class="headerLoginCad">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./login.html">Login</a></li>
+    </ul>
+  </header>
+
+  <div class='loginCad'>
+    <div class='info'>
+      <img src="./images/homeBG.jpg">
+      <h1>É nosso, é do Brasil.</h1>
+    </div>
+    <div class='formulario'>
+      <h1>Cadastro</h1>
+      <form class='formLoginCad' action="index.html">
+        <div class='formInput nomeInput'>
+            <input type="text" placeholder='Nome' required/>
+        </div>
+        <div class='formInput emailInput'>
+            <input type="email" placeholder='Email' required/>
+        </div>
+        <div class="formInput senhaInput">
+          <input id="senha" type="password" placeholder='Senha' required/>
+        </div>
+        <div class="formInput senhaInput">
+          <input id="confSenha" type="password" placeholder='Confirmar Senha' required/>
+          <button class="btnMostrar" id="btnMostrar" type="button">Mostrar Senha</button>
+        </div>
+        <a href="./login.html">Já possui uma conta? Entre agora mesmo</a>
+        <button id="btnSubmit" class='btnForm'>Entrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

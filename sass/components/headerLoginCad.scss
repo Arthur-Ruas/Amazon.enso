@@ -1,0 +1,82 @@
+$corPrincipal: #00686b;
+$corEscura: #093f49;
+$corBranco: #fff;
+
+.headerLoginCad{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 1rem 4rem;
+
+    ul{
+        display: flex;
+        gap: 40px;
+
+        li{
+            color: $corPrincipal;
+            font-size: .9rem;
+            font-weight: 600;
+
+            a{
+                position: relative;
+
+                &:visited{
+                    color: $corPrincipal;
+                }
+                
+                &:active{
+                    color: $corPrincipal;
+                }
+
+                &::after{
+                    content: '';
+                    height: 2px;
+                    width: 0px;
+                    position: absolute;
+                    right: 50%;
+                    transform: translateX(50%);
+                    bottom: -5px;
+                    transition: .3s;
+                    background-color: $corEscura;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                    background-color: $corEscura;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .headerLoginCad{   
+        ul{
+            li{
+                color: $corBranco; 
+                a{
+                    position: relative;
+    
+                    &:visited{
+                        color: $corBranco;
+                    }
+                    
+                    &:visited{
+                        color: $corBranco;
+                    }
+
+                    &::after{
+                        background-color: $corBranco;
+                    }
+    
+                    &:hover::after{
+                        background-color: $corBranco;
+                    }
+                }
+            }
+        }
+    }
+}

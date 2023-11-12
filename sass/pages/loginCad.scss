@@ -1,0 +1,211 @@
+$corPrincipal: #00686b;
+$corEscura: #093f49;
+$corBranco: #fff;
+
+.loginCad{
+    height: 100vh;
+    display: flex;
+
+    .info{
+        position: relative;
+        height: 100%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        padding: 6rem;
+        overflow: hidden;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            z-index: -1;
+        }
+
+        h1{
+            color: #fff;
+            font-size: 4rem;
+        }
+    }
+
+    .formulario{
+        background-color: #fff;
+        height: 100%;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+
+        h1{
+            color: var(--corEscura);
+        }
+        
+        .formLoginCad{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px ;
+
+            .formInput{
+                background-color: #fff;
+                width: 500px;
+                padding: .8rem 1rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                box-shadow: 0 3px 3px -3px #444;
+
+                input{
+                    color: var(--corEscura);
+                    width: 100%;
+                    border: none;
+                    font-size: 1rem;
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+                .btnMostrar{
+                    background-color: transparent;
+                    color: $corPrincipal;
+                    width: fit-content;
+                    white-space: nowrap;
+                    border: none;
+                    font-size: .8rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+
+            .impInfo{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .formInput{
+                    width: 240px;
+
+                    input{
+                        width: 100%;
+                    }                  
+                }
+            }
+
+            a{
+                color: $corEscura;
+                align-self: flex-end;
+                position: relative;
+                font-size: .8rem; 
+                font-weight: 600;
+
+                &::after{
+                    content: '';
+                    height: 2px;
+                    width: 0px;
+                    position: absolute;
+                    right: 50%;
+                    transform: translateX(50%);
+                    bottom: -5px;
+                    transition: .3s;
+                    background-color: $corEscura;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                    background-color: $corEscura;
+                }
+            }
+        }
+
+        .btnForm{
+            background-color: $corBranco;
+            color: $corEscura;
+            width: fit-content;
+            margin-top: 20px;
+            padding: .8rem 3rem;
+            border: 1px solid $corEscura;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $corEscura;
+                color: $corBranco;
+                box-shadow: inset 0px 200px 0 var(--corPrimaria);
+                transition: .3s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .loginCad{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .info{
+            display: none;
+        }
+    
+        .formulario{
+            background-color: transparent;
+            height: 100%;
+
+            h1{
+                color: $corBranco;
+            }
+            
+            .formLoginCad{
+                gap: 30px ;
+    
+                .formInput{
+                    border-radius: 5px;
+                }
+
+                a{
+                    color: $corBranco;
+                    align-self: flex-end;
+                    position: relative;
+                    font-size: .8rem; 
+    
+                    &::after{
+                        content: '';
+                        height: 2px;
+                        width: 0px;
+                        position: absolute;
+                        right: 50%;
+                        transform: translateX(50%);
+                        bottom: -5px;
+                        transition: .3s;
+                        background-color: $corBranco;
+                    }
+    
+                    &:hover::after{
+                        width: 100%;
+                        background-color: $corBranco;
+                    }
+                }
+            }
+
+            .btnForm{
+                margin-top: 20px;
+                padding: .8rem 3rem;
+                border-radius: 10px;
+                font-weight: 600;             
+                border: none;
+    
+                &:hover{
+                    color: $corBranco;
+                    box-shadow: inset 0px 200px 0 var(--corClara);
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}

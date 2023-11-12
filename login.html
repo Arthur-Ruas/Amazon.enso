@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.enso</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <script defer src="./js/senha.js"></script>
+
+  <header class="headerLoginCad">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./cadastro.html">Cadastro</a></li>
+    </ul>
+  </header>
+
+  <div class='loginCad'>
+    <div class='info'>
+      <img src="./images/homeBG.jpg">
+      <h1>É nosso, é do Brasil.</h1>
+    </div>
+    <div class='formulario'>
+      <h1>Login</h1>
+      <form class='formLoginCad' action="index.html">
+        <div class='formInput emailInput'>
+            <input type="email" placeholder='Email' required/>
+        </div>
+        <div class="formInput senhaInput">
+          <input id="senha" type="password" placeholder='Senha' required/>
+          <button class="btnMostrar" id="btnMostrar" type="button">Mostrar Senha</button>
+        </div>
+        <a href="./cadastro.html">Não tem uma conta? Crie agora mesmo</a>
+        <button class='btnForm'>Entrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

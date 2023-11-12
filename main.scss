@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@import "./sass/components/header.scss";
+@import "./sass/components/container.scss";
+@import "./sass/components/footer.scss";
+@import "./sass/pages/loginCad.scss";
+@import "./sass/components/headerLoginCad.scss";
+
+*,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
+}
+
+$corPrincipal: #00686b;
+$corEscura: #093f49;
+$corBranco: #fff;
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
