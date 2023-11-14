@@ -1,2 +1,2 @@
 # Amazon.enso
-Site feito para a matéria de APS
+Site simples feito para a matéria de APS
